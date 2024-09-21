@@ -1,0 +1,2 @@
+[console_scripts]
+anonymize-audio = audio_anonymizer.anonymize_pipeline:main
