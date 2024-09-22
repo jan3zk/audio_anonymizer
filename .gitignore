@@ -1,5 +1,4 @@
-data/*
-!data/links.md
+data/
 build/
 audio-anonymizer.egg-info/
 *.wav
