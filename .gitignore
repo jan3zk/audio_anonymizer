@@ -1,5 +1,4 @@
-data/
 build/
-audio-anonymizer.egg-info/
-*.wav
+*.egg-info/
 *.pyc
+*.bak

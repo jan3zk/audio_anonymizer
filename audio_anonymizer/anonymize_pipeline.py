@@ -45,7 +45,7 @@ def run_alignment(in_wav_file, txt_file):
         "--g2p_model_path", G2P_MODEL_PATH
     ]
     
-    print(f"Running MFA alignment for {in_wav_file}...")
+    print(f"Running MFA alignment for {in_wav_file}. This may take several minutes ...")
     subprocess.run(mfa_command, check=True)
 
 def main():
@@ -66,7 +66,7 @@ def main():
     
     # Run anonymization
     textgrid_file = os.path.join(TMP_DIR, os.path.basename(args.in_wav_file).replace(".wav", ".TextGrid"))
-    print(f"Anonymizing audio {args.in_wav_file}...")
+    print(f"Anonymizing audio {args.in_wav_file}:")
     anonymize_audio(args.in_wav_file, textgrid_file, args.out_wav_file, args.keywords)
 
     files = glob.glob(os.path.join(TMP_DIR,'*'))

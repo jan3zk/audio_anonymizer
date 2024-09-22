@@ -7,11 +7,14 @@ setup(
     include_package_data=True,
     scripts=['audio_anonymizer/anonymize_pipeline.py'],
     install_requires=[
-        "montreal-forced-aligner",
         "textgrid",
         "spacy",
         "pydub",
+        "pgvector",
+        "pynini",
+        "hdbscan",
         "onedrivedownloader",
+        "numpy==1.24.3"
     ],
     entry_points={
         'console_scripts': [

@@ -6,17 +6,11 @@ from pydub.generators import Sine
 from textgrid import TextGrid
 from numpy import inf
 import spacy
-from spacy.cli.download import download
 import warnings
 
 warnings.filterwarnings("ignore", category=FutureWarning, module="thinc.shims.pytorch")
 # Load spaCy model for NER
-try:
-    nlp = spacy.load("sl_core_news_trf")
-except OSError:
-    download(model="sl_core_news_trf")
-    nlp = spacy.load("sl_core_news_trf")
-
+nlp = spacy.load("sl_core_news_trf")
 
 def get_intervals(input_textgrid):
     tg = TextGrid.fromFile(input_textgrid)
@@ -57,7 +51,7 @@ def anonymize_audio(input_wav, input_textgrid, output_wav, keywords=[]):
     for xmin, xmax, text in intervals:
         for keyword in keywords:
             if flexible_compare(text.lower(), keyword.lower()):
-                print(f"Anonymizing part from {xmin}s to {xmax}s: {text}")
+                print(f"    Part from {xmin}s to {xmax}s containing '{text}' replaced by beeping sound.")
                 beep = Sine(1000).to_audio_segment(duration=int((xmax - xmin) * 1000), volume=audio.dBFS)
                 audio = audio.overlay(beep, position=int(xmin * 1000), gain_during_overlay=-inf)
                 anonymized_intervals.append((xmin, xmax, text))
@@ -68,7 +62,7 @@ def anonymize_audio(input_wav, input_textgrid, output_wav, keywords=[]):
 
 if __name__ == "__main__":
     # Call example:
-    # python anonymize_audio.py ../data/example/Artur-B-G0041-P000091.wav ../data/tmp/Artur-B-G0041-P000091.TextGrid ../data/example/Artur-B-G0041-P000091.anonymized.wav
+    # python anonymize_audio.py ../data/Artur-B-G0041-P000091.wav ~/.cache/anonymize-audio/tmp/Artur-B-G0041-P000091.TextGrid ../data/Artur-B-G0041-P000091.anonymized.wav
     if len(sys.argv) < 4:
         print("Usage: python anonymize_audio.py input.wav input.TextGrid output.wav keyword1 keyword2 ...")
         sys.exit(1)
