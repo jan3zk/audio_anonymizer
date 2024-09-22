@@ -66,7 +66,7 @@ anonymize-audio <in_wav_file> <txt_file> [out_wav_file] [--keywords keyword1 key
    - **Default**: `input_anonymized.wav` (if `in_wav_file` is `input.wav`).
 4. **`--keywords`** (optional):
 
-   - **Description**: A list of specific words or phrases you want to anonymize in the audio file. If not provided, the script will attempt to automatically detect keywords using SpaCy named entity recognition.
+   - **Description**: A list of specific words or phrases you want to anonymize in the audio file. If not provided, the script will attempt to automatically detect keywords using Named Entity Recognition.
    - **Example**: `--keywords John confidential secret`
    - **Usage**: Any number of keywords can be provided. The script will replace occurrences of these words in the audio with a beeping sound.
 
