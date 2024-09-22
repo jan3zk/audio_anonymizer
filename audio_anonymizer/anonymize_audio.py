@@ -62,7 +62,7 @@ def anonymize_audio(input_wav, input_textgrid, output_wav, keywords=[]):
 
 if __name__ == "__main__":
     # Call example:
-    # python anonymize_audio.py ../data/Artur-B-G0041-P000091.wav ~/.cache/anonymize-audio/tmp/Artur-B-G0041-P000091.TextGrid ../data/Artur-B-G0041-P000091.anonymized.wav
+    # python anonymize_audio.py ../example/Artur-B-G0041-P000091.wav ~/.cache/anonymize-audio/tmp/Artur-B-G0041-P000091.TextGrid ../example/Artur-B-G0041-P000091.anonymized.wav
     if len(sys.argv) < 4:
         print("Usage: python anonymize_audio.py input.wav input.TextGrid output.wav keyword1 keyword2 ...")
         sys.exit(1)
