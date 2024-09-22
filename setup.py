@@ -7,8 +7,11 @@ setup(
     include_package_data=True,
     scripts=['audio_anonymizer/anonymize_pipeline.py'],
     install_requires=[
-        # Add external dependencies
         "montreal-forced-aligner",
+        "textgrid",
+        "spacy",
+        "pydub",
+        "onedrivedownloader",
     ],
     entry_points={
         'console_scripts': [
@@ -16,7 +19,7 @@ setup(
         ],
     },
     description="An audio anonymization tool using MFA.",
-    author="Janez Krizaj",
+    author="jan3zk",
     author_email="janez.krizaj@fe.uni-lj.si",
     url="https://github.com/jan3zk/audio_anonymizer",
     classifiers=[
