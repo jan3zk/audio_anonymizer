@@ -2,15 +2,9 @@
 
 ## Overview
 
-The Audio Anonymizer is a tool designed to anonymize speech data by replacing specified words or phrases in an audio file with a beep sound or other custom audio obfuscations. This can be useful in contexts such as research data anonymization, privacy preservation, or sensitive information removal from audio recordings.
+The Audio Anonymizer is a tool designed to anonymize speech data by replacing specified words or phrases in an audio file with a beep sound. This can be useful in contexts such as research data anonymization, privacy preservation, or sensitive information removal from audio recordings.
 
-This package uses the Montreal Forced Aligner (MFA) for forced alignment and supports Slovene speech with a pre-built acoustic model and dictionary.
-
-## Features
-
-- **Speech anonymization:** Replaces specific words in audio files based on provided transcriptions.
-- **Support for Slovene speech:** Includes necessary models for Slovene.
-- **Customizable anonymization:** Allows the use of custom words or phrases for anonymization.
+This package uses the Montreal Forced Aligner (MFA) for forced alignment and supports Slovene speech anonymization with a pre-built acoustic model and pronunciation dictionary.
 
 ## Installation
 
@@ -72,7 +66,7 @@ anonymize-audio <in_wav_file> <txt_file> [out_wav_file] [--keywords keyword1 key
    - **Default**: `input_anonymized.wav` (if `in_wav_file` is `input.wav`).
 4. **`--keywords`** (optional):
 
-   - **Description**: A list of specific words or phrases you want to anonymize in the audio file. If not provided, the script will attempt to automatically detect keywords using natural language processing (NLP).
+   - **Description**: A list of specific words or phrases you want to anonymize in the audio file. If not provided, the script will attempt to automatically detect keywords using SpaCy named entity recognition.
    - **Example**: `--keywords John confidential secret`
    - **Usage**: Any number of keywords can be provided. The script will replace occurrences of these words in the audio with a beeping sound.
 
@@ -99,14 +93,6 @@ anonymize-audio <in_wav_file> <txt_file> [out_wav_file] [--keywords keyword1 key
    ```
 
    This will specifically anonymize the words "John," and "Doe" in the audio file.
-
-## Dependencies
-
-- Python 3.8+
-- Montreal Forced Aligner 2.2.14
-- SpaCy with `sl_core_news_trf` model
-
-Ensure these dependencies are installed before running the anonymizer.
 
 ## License
 
