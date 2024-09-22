@@ -1,4 +1,3 @@
-
 # Audio Anonymizer
 
 ## Overview
@@ -57,21 +56,22 @@ anonymize-audio <in_wav_file> <txt_file> [out_wav_file] [--keywords keyword1 key
 ### Arguments
 
 1. **`in_wav_file`** (required):
+
    - **Description**: The input audio file in `.wav` format.
    - **Example**: `input.wav`
    - This is the file you wish to anonymize.
-
 2. **`txt_file`** (required):
+
    - **Description**: The transcription file in `.txt` format that corresponds to the `in_wav_file`.
    - **Example**: `transcription.txt`
    - The transcription must align with the audio content for accurate anonymization.
-
 3. **`out_wav_file`** (optional):
+
    - **Description**: The output audio file to be created. If not specified, the script will create an anonymized file by appending `_anonymized` to the original filename.
    - **Example**: `anonymized_output.wav`
    - **Default**: `input_anonymized.wav` (if `in_wav_file` is `input.wav`).
-   
 4. **`--keywords`** (optional):
+
    - **Description**: A list of specific words or phrases you want to anonymize in the audio file. If not provided, the script will attempt to automatically detect keywords using natural language processing (NLP).
    - **Example**: `--keywords John confidential secret`
    - **Usage**: Any number of keywords can be provided. The script will replace occurrences of these words in the audio with a beeping sound.
@@ -79,21 +79,25 @@ anonymize-audio <in_wav_file> <txt_file> [out_wav_file] [--keywords keyword1 key
 ### Example Commands
 
 1. **Basic Anonymization**:
+
    ```bash
    anonymize-audio input.wav transcription.txt
    ```
-   This command will create `input_anonymized.wav` as the output, replacing automatically detected keywords.
 
+   This command will create `input_anonymized.wav` as the output, replacing automatically detected keywords.
 2. **Custom Output File**:
+
    ```bash
    anonymize-audio input.wav transcription.txt output.wav
    ```
-   This will generate the anonymized file as `output.wav`.
 
+   This will generate the anonymized file named `output.wav`.
 3. **Specifying Keywords**:
+
    ```bash
    anonymize-audio input.wav transcription.txt --keywords John Doe
    ```
+
    This will specifically anonymize the words "John," and "Doe" in the audio file.
 
 ## Dependencies
