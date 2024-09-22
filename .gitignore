@@ -1,6 +1,6 @@
 data/*
 !data/links.md
-#build/
-#audio-anonymizer.egg-info/
+build/
+audio-anonymizer.egg-info/
 *.wav
 *.pyc
