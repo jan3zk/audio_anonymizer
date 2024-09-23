@@ -25,9 +25,9 @@ conda install montreal-forced-aligner==2.2.14
 
 For detailed instructions, refer to the official [MFA documentation](https://montreal-forced-aligner.readthedocs.io/en/latest/).
 
-### 3. Install the Audio Anonymizer package
+### 3. Install the anonymize-audio package
 
-To install `anonymize-audio` script, run the following command:
+To install the `anonymize-audio` package, run the following command from within the repository directory:
 
 ```bash
 pip install .
