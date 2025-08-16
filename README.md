@@ -96,4 +96,4 @@ anonymize-audio <in_wav_file> <txt_file> [out_wav_file] [--keywords keyword1 key
 
 ## License
 
-This project is licensed under the BSD 2-Clause License. See the `LICENSE` file for more details.
+This project is licensed under the Apache 2.0 license. See the `LICENSE` file for more details.
