@@ -103,7 +103,7 @@ This project is licensed under the Apache 2.0 license. See the `LICENSE` file fo
 If you use this tool in your research work, please cite it as follows:
 
 **APA**  
-Križaj, J., Dobrišek, S. (2025). *Anonymize-audio-sl 1.0: Automatic anonymization of Slovene speech recordings* [Computer software].  
+Križaj, J., Dobrišek, S. (2024). *Anonymize-audio-sl 1.0: Automatic anonymization of Slovene speech recordings* [Computer software].  
 Faculty of Electrical Engineering, University of Ljubljana. Available at: [https://github.com/jan3zk/audio_anonymizer](https://github.com/jan3zk/audio_anonymizer)
 
 **BibTeX**
@@ -111,7 +111,7 @@ Faculty of Electrical Engineering, University of Ljubljana. Available at: [https
 @misc{anonymizeaudio_sl_1_0,
   author       = {Križaj, Janez and Dobrišek, Simon},
   title        = {Anonymize-audio-sl 1.0: Automatic anonymization of Slovene speech recordings},
-  year         = {2025},
+  year         = {2024},
   howpublished = {\url{https://github.com/jan3zk/audio_anonymizer}},
   note         = {Faculty of Electrical Engineering, University of Ljubljana}
 }
