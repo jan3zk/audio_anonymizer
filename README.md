@@ -104,15 +104,15 @@ python audio_anonymizer/anonymize_audio.py <in_wav_file> <textgrid_file> <out_wa
 
 **Arguments**
 - in_wav_file (required)
-  Path to the input .wav audio file.
+  <br>Path to the input .wav audio file.
 - textgrid_file (required)
-  Path to a Praat TextGrid file containing word-level annotations.
-  The script will read the "words" tier to determine time intervals for anonymization.
+  <br>Path to a Praat TextGrid file containing word-level annotations.
+  <br>The script will read the "words" tier to determine time intervals for anonymization.
 - out_wav_file (optional)
-  Path where the anonymized .wav file will be saved.
+  <br>Path where the anonymized .wav file will be saved.
 - --keywords (optional)
-  List of keywords or patterns to anonymize.
-  Example: --keywords Janez* Novak* confidential
+  <br>List of keywords or patterns to anonymize.
+  <br>Example: --keywords Janez* Novak* confidential
 
 **Example**
 ```bash
