@@ -112,7 +112,6 @@ python audio_anonymizer/anonymize_audio.py <in_wav_file> <textgrid_file> <out_wa
   <br>Path where the anonymized .wav file will be saved.
 - --keywords (optional)
   <br>List of keywords or patterns to anonymize.
-  <br>Example: --keywords Janez* Novak* confidential
 
 **Example**
 ```bash
