@@ -104,6 +104,7 @@ python audio_anonymizer/anonymize_audio.py <in_wav_file> <textgrid_file> <out_wa
 
 **Arguments**
 - in_wav_file (required)
+
 Path to the input .wav audio file.
 - textgrid_file (required)
 Path to a Praat TextGrid file containing word-level annotations.
