@@ -104,16 +104,15 @@ python audio_anonymizer/anonymize_audio.py <in_wav_file> <textgrid_file> <out_wa
 
 **Arguments**
 - in_wav_file (required)
-
-Path to the input .wav audio file.
+  Path to the input .wav audio file.
 - textgrid_file (required)
-Path to a Praat TextGrid file containing word-level annotations.
-The script will read the "words" tier to determine time intervals for anonymization.
+  Path to a Praat TextGrid file containing word-level annotations.
+  The script will read the "words" tier to determine time intervals for anonymization.
 - out_wav_file (optional)
-Path where the anonymized .wav file will be saved.
+  Path where the anonymized .wav file will be saved.
 - --keywords (optional)
-List of keywords or patterns to anonymize.
-Example: --keywords Janez* Novak* confidential
+  List of keywords or patterns to anonymize.
+  Example: --keywords Janez* Novak* confidential
 
 **Example**
 ```bash
@@ -121,7 +120,7 @@ python audio_anonymizer/anonymize_audio.py input.wav input.TextGrid output.wav -
 ```
 This command will replace all intervals matching Janez, Novak and their inflected forms in the input.wav file using a 1 kHz beep mask.
 
-** Notes**
+**Notes**
 
 The TextGrid must contain a tier named words with properly aligned intervals.
 If you don't have a TextGrid, you can still use the classic pipeline with a .txt transcription, which will automatically generate the alignment via MFA.
